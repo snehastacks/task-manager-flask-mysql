@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f7f9;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.task {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.empty {
+    color: #666;
+    font-style: italic;
+}
+.task-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.task-title {
+    font-weight: 500;
+}
+
+.task-actions a {
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+.task-actions .complete {
+    color: #16a34a;
+}
+
+.task-actions .delete {
+    color: #dc2626;
+}
+.task-row.fresh {
+    background-color: #ffffff;
+}
+
+.task-row.aging {
+    background-color: #fff7ed;
+}
+
+.task-row.stale {
+    background-color: #fee2e2;
+}
+.heatmap {
+    display: grid;
+    grid-template-columns: repeat(7, 16px);
+    gap: 6px;
+    margin: 20px auto;   /* 👈 centers horizontally */
+}
+
+.heatmap-cell {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+}
+
+.heatmap-cell.inactive {
+    background-color: #e5e7eb;
+}
+
+.heatmap-cell.active {
+    background-color: #22c55e;
+}
+
+.heatmap-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat strong {
+    font-size: 24px;
+    display: block;
+}
+
+.stat span {
+    color: #6b7280;
+    font-size: 14px;
+}

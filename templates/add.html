@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Add Task</h2>
+
+{% if error %}
+    <p class="empty" style="color: #dc2626;">
+        {{ error }}
+    </p>
+{% endif %}
+
+<form method="post">
+    <input type="text" name="title" placeholder="Task title" required>
+    <br><br>
+    <input type="submit" value="Add Task">
+</form>
+
+<br>
+<a href="/tasks">Back</a>
+{% endblock %}

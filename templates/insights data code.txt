@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Consistency Insights</h2>
+
+<div class="task-row">
+    <span class="task-title">
+        Longest completion streak
+    </span>
+    <span class="task-actions">
+        {{ longest_streak }} days
+    </span>
+</div>
+
+<div class="task-row">
+    <span class="task-title">
+        Total active days
+    </span>
+    <span class="task-actions">
+        {{ total_active_days }} days
+    </span>
+</div>
+
+<br>
+<a href="/tasks">Back to tasks</a>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Archived Tasks</h2>
+
+{% if not tasks %}
+    <p class="empty">No archived tasks.</p>
+{% endif %}
+
+{% for task in tasks %}
+    <div class="task-row">
+        <span class="task-title">
+            {{ task[1] }} <br>
+            <small>Created at: {{ task[2] }}</small>
+        </span>
+    </div>
+{% endfor %}
+
+<br>
+<a href="/tasks">Back to pending</a>
+{% endblock %}
